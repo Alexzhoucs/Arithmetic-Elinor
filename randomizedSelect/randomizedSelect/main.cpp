@@ -10,8 +10,8 @@ int main()
 	time_t beginT, endT;
 	time_t during1, during2;
 
-	// srand((unsigned)time(NULL));
-	srand(426);
+	srand((unsigned)time(NULL));
+	//srand(426);
 
 	for (int i = 0; i < N ; i++)
 		B[i] = rand() %100;	    //B³õÊ¼»¯
