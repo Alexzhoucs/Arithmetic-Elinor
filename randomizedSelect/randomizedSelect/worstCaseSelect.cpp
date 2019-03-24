@@ -26,17 +26,12 @@ int findMedian(int A[], int p, int r)
 {
 	int i;
 	int n = r - p + 1;
-	int B[(N / 5) + 1];
+	int B[(N / 5)];
 	if (n <= 5)
 		return(insertionSort(A, p, r));
 	for (i = 0; i < (n / 5); i++)
 	{
 		B[i] = insertionSort(A, p + 5 * i, p + 5 * i + 4);
-	}
-	if (5 * i != n)
-	{
-		B[i] = insertionSort(A, p + 5 * i, r);
-		i++;
 	}
 	return(findMedian(B, 0, i - 1));
 }
