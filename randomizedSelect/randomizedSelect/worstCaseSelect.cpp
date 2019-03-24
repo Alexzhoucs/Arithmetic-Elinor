@@ -6,6 +6,11 @@ int worstCaseSelect(int A[])
 	int r = N - 1;
 	while (1)
 	{
+		if (r - p < 5)
+		{
+			insertionSort(A, p, r);
+			return(A[INIT - 1]);
+		}
 		int x = findMedian(A, p, r);
 		int k = partition(A, x, p, r) + 1;
 		if (INIT == k)
@@ -13,7 +18,7 @@ int worstCaseSelect(int A[])
 		if (INIT < k)
 			r = k;
 		else
-			p = k + 1;
+			p = k;
 	}
 }
 
@@ -38,6 +43,7 @@ int findMedian(int A[], int p, int r)
 
 int partition(int A[], int x, int p, int r)
 {
+	int flag = 0;
 	int i = p - 1;
 	int j = r + 1;
 	while (1)
@@ -52,13 +58,19 @@ int partition(int A[], int x, int p, int r)
 		} while (A[i]<x);
 		if (i < j)
 		{
+			if (x == A[j])
+				flag = 1;
+
 			int temp = A[i];
 			A[i] = A[j];
 			A[j] = temp;
 		}
 		else
 		{
-			return (j);
+			if (flag == 1)
+				return (j);
+			else
+				return(j + 1);
 		}
 	}
 }
