@@ -1,8 +1,8 @@
 #include <iostream>
 #include <time.h>
 
-#define N 100
-#define	INIT 7
+#define N 1000
+#define	INIT 700
 
 using namespace std;
 
