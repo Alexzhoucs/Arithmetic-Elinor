@@ -10,12 +10,13 @@ int main()		//随机生成大小为N的数组，输出用插入排序、9.2算法和9.3算法求得的第INI
 	time_t beginT, endT;	//开始时间、结束时间
 	time_t during0, during1, during2;//插入排序运行时间、9.2算法运行时间、9.3算法运行时间
 	
-	
+	ofstream f;
+	f.open("duringTime.csv", ios::binary);
 
 	srand((unsigned)time(NULL));
 	//srand(14);
 	
-	for (int j = 1; j <= 10;j++)
+	for (int j = 1; j <= 100;j++)
 	{
 
 
@@ -51,6 +52,7 @@ int main()		//随机生成大小为N的数组，输出用插入排序、9.2算法和9.3算法求得的第INI
 		cout << result1 << endl;
 		cout << during1;
 		cout << endl << endl;
+		f << during1;
 
 		//---------------------------------------------
 
@@ -67,11 +69,13 @@ int main()		//随机生成大小为N的数组，输出用插入排序、9.2算法和9.3算法求得的第INI
 		cout << result2 << endl;
 		cout << during2;
 		cout << endl << endl;
+		f << "," << during2 << endl;
 
 
 		//---------------------------------------------
 
 	};
+	f.close();
 	getchar();
 	return 0;
 }
