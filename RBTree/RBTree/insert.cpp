@@ -2,6 +2,7 @@
 
 void insertFixUp(tree T, node* z);
 void LeftRotate(tree T, node* z);
+void RightRotate(tree T, node* y);
 
 void insert(tree T)
 {

@@ -17,7 +17,7 @@ int OSRank(tree T, node* x)
 	}
 }
 
-void rank(tree T)
+void findRank(tree T)
 {
 	KEYTYPE key;
 	cout << "Please input the rank of the node that you want." << endl;

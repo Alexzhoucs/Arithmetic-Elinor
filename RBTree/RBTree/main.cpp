@@ -27,7 +27,7 @@ void main()
 		switch (choice)
 		{
 		case '1':
-			Insert(T);
+			insert(T);
 			break;
 		case '2' :
 			TreeWalk(T);
@@ -51,7 +51,7 @@ void main()
 			Select(T);
 			break;
 		case '9':
-			Rank(T);
+			findRank(T);
 			break;
 		case '0':
 			cout << "³ÌÐòÍË³ö£¬Çë°´Enter¡£" << endl;
