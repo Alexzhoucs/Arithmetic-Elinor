@@ -26,4 +26,10 @@ struct tree
 
 
 void ConstructRBTree(tree T);
+node* findNode(tree T, KEYTYPE key);
+void printout(node* x);
+void rank(tree T);
+void insertNode(tree T, node* z);
+
+
 

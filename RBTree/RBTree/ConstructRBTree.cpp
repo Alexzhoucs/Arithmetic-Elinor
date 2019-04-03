@@ -5,13 +5,13 @@ int inputTree(KEYTYPE c[]);
 
 void ConstructRBTree(tree T)
 {
-	KEYTYPE C[MAXSIZE];
+	KEYTYPE c[MAXSIZE];
 	KEYTYPE scanner;
 	char d[MAXSIZE];
 	int n;
 
-	n = inputTree(C);
-	cout << C << endl;
+	n = inputTree(c);
+	cout << c << endl;
 
 	cout << "Please input datas." << endl;
 	for (int i = 0; i < n; i++)
@@ -19,19 +19,29 @@ void ConstructRBTree(tree T)
 		cin >> d[i];
 	}
 
-
-
+	for (int i = 0; i < n; i++)
+	{
+		node z;
+		z.key = c[i];
+		z.data = d[i];
+		z.color = 'r';
+		z.left = T.nil;
+		z.right = T.nil;
+		z.size = 1;
+		insertNode(T, &z);
+	}
+	
 	/*do
 	{
 		cin >> scanner;
 
 	} while ();*/
 
-	while (1)
-	{
-		cin >> scanner;
-		cout << scanner;
-	}
+	//while (1)
+	//{
+	//	cin >> scanner;
+	//	cout << scanner;
+	//}
 
 }
 

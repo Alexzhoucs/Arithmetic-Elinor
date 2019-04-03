@@ -26,5 +26,14 @@
     <ClCompile Include="ConstructRBTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Rank.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="commonlyUsedFunctions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="insert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
