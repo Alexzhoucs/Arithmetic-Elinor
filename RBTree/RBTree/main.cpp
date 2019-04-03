@@ -30,10 +30,11 @@ void main()
 			insert(T);
 			break;
 		case '2' :
-			TreeWalk(T);
+			treeWalk(T.root, T.nil);
+			cout << endl;
 			break;
 		case '3':
-			Demo(T.root, T.nil, 0);
+			demo(T.root, T.nil, 0);
 			break;
 		case '4':
 			MinKey(T);

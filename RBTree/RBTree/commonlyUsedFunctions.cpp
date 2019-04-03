@@ -22,3 +22,30 @@ void printout(node* x)
 {
 	cout << x->key << "|" << x->data << "|" << x->color << "|" << x->size << endl;
 }
+
+void treeWalk(node* x, node* nil)
+{
+	if (x != nil)
+	{
+		treeWalk(x->left, nil);
+		cout << x->key << "\t";
+		treeWalk(x->right, nil);
+	}
+}
+
+void demo(node* x, node* nil, int i)
+{
+	if (x == nil)
+	{
+		for (int j = 0; j < i; j++)
+			cout << "\t\t";
+		cout << "nil | " << x->color << " | " << x->size << endl;
+		return;
+	}
+	else
+	{
+		demo(x->right, nil, i + 1);
+		printout(x);
+		demo(x->left, nil, i + 1);
+	}
+}

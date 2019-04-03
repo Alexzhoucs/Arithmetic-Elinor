@@ -31,6 +31,12 @@ void printout(node* x);
 void findRank(tree T);
 void insertNode(tree T, node* z);
 void insert(tree T);
+void treeWalk(node* x, node* nil);
+void demo(node* x, node* nil, int i);
+void minKey(tree T);
+node* findMin(tree T);
+void maxKey(tree T);
+node* findMax(tree T);
 
 
 

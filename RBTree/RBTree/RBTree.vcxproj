@@ -122,6 +122,7 @@
     <ClCompile Include="commonlyUsedFunctions.cpp" />
     <ClCompile Include="insert.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="minAndMax.cpp" />
     <ClCompile Include="Rank.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

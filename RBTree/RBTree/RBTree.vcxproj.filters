@@ -35,5 +35,8 @@
     <ClCompile Include="insert.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="minAndMax.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
