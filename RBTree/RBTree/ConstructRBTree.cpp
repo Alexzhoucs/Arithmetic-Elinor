@@ -8,9 +8,17 @@ void ConstructRBTree(tree T)
 	KEYTYPE C[MAXSIZE];
 	KEYTYPE scanner;
 	char d[MAXSIZE];
+	int n;
 
-	inputTree(C);
+	n = inputTree(C);
 	cout << C << endl;
+
+	cout << "Please input datas." << endl;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> d[i];
+	}
+
 
 
 	/*do
@@ -32,6 +40,7 @@ int inputTree(KEYTYPE c[])
 	string s;
 	stringstream ss;
 	int i = 0;
+	int n = 0;
 
 	cout << "Please input the keys." << endl;
 	getline(cin, s);
@@ -48,8 +57,9 @@ int inputTree(KEYTYPE c[])
 			break;
 		}
 		c[i] = a;
+		n++;
 		i++;
 	}
 	//	c[i] = '\0';
-	return 0;
+	return n;
 }
