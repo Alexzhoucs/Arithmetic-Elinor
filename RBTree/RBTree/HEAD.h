@@ -37,6 +37,8 @@ void minKey(tree T);
 node* findMin(tree T);
 void maxKey(tree T);
 node* findMax(tree T);
+void successor(tree T);
+void Select(tree T);
 
 
 

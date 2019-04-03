@@ -124,6 +124,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minAndMax.cpp" />
     <ClCompile Include="Rank.cpp" />
+    <ClCompile Include="select.cpp" />
+    <ClCompile Include="successor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -37,13 +37,13 @@ void main()
 			demo(T.root, T.nil, 0);
 			break;
 		case '4':
-			MinKey(T);
+			minKey(T);
 			break;
 		case '5':
-			MaxKey(T);
+			maxKey(T);
 			break;
 		case '6':
-			Successor(T);
+			successor(T);
 			break;
 		case '7':
 			Predecessor(T);
