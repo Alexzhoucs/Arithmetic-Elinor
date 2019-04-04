@@ -123,6 +123,7 @@
     <ClCompile Include="insert.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minAndMax.cpp" />
+    <ClCompile Include="predecessor.cpp" />
     <ClCompile Include="Rank.cpp" />
     <ClCompile Include="select.cpp" />
     <ClCompile Include="successor.cpp" />

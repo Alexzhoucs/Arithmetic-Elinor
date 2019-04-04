@@ -1,40 +1,41 @@
 #include "HEAD.h"
 
-void insertFixUp(tree T, node* z);
-void LeftRotate(tree T, node* z);
-void RightRotate(tree T, node* y);
+void insertFixUp(tree* T, node* z);
+void LeftRotate(tree* T, node* z);
+void RightRotate(tree* T, node* y);
 
-void insert(tree T)
+void insert(tree* T)
 {
-	node z;
+	node* z = (node*)malloc(sizeof(node));
 	cout << "Please input the data you want to insert." << endl;
-	cin >> z.data;
+	cin >> z->data;
 
 	cout << "Please input its key." << endl;
-	cin >> z.key;
+	cin >> z->key;
 
-	z.size = 1;
-	z.color = 'r';
-	z.left = T.nil;
-	z.right = T.nil;
+	z->size = 1;
+	z->color = 'r';
+	z->left = T->nil;
+	z->right = T->nil;
 
-	insertNode(T, &z);
+	insertNode(T, z);
 	cout << "Insert complete" << endl;
 }
 
-void insertNode(tree T, node* z)
+void insertNode(tree* T, node* z)
 {
-	node* y;
+	node* y=T->nil;
 
-	if (T.root == T.nil)
+	if (T->root == T->nil)
 	{
-		T.root = z;
-		z->p = T.nil;
+		T->root = z;
+		z->p = T->nil;
 		z->color = 'b';
+		return;
 	}
 
-	node* x = T.root;
-	while (x != T.nil)
+	node* x = T->root;
+	while (x != T->nil)
 	{
 		x->size++;
 		y = x;
@@ -53,9 +54,9 @@ void insertNode(tree T, node* z)
 	insertFixUp(T, z);
 }
 
-void insertFixUp(tree T, node* z)
+void insertFixUp(tree* T, node* z)
 {
-	while (z->p->color == 'r')
+	while (z!=T->root && z->p->color == 'r')
 	{
 		node* y;
 		if (z->p == z->p->p->left)
@@ -104,19 +105,19 @@ void insertFixUp(tree T, node* z)
 
 		}
 	}
-	T.root->color = 'b';
+	T->root->color = 'b';
 }
 
-void LeftRotate(tree T, node* x)
+void LeftRotate(tree* T, node* x)
 {
 	node* y;
 	y = x->right;
 	x->right = y->left;
-	if (y->left != T.nil)
+	if (y->left != T->nil)
 		y->left->p = x;
 	y->p = x->p;
-	if (x->p == T.nil)
-		T.root = y;
+	if (x->p == T->nil)
+		T->root = y;
 	else if (x == x->p->left)
 		x->p->left = y;
 	else
@@ -127,15 +128,15 @@ void LeftRotate(tree T, node* x)
 	x->size = x->left->size + x->right->size + 1;
 }
 
-void RightRotate(tree T, node* y)
+void RightRotate(tree* T, node* y)
 {
 	node* x = y->left;
 	y->left = x->right;
-	if (x->right != T.nil)
+	if (x->right != T->nil)
 		x->right->p = y;
 	x->p = y->p;
-	if (y->p == T.nil)
-		T.root = x;
+	if (y->p == T->nil)
+		T->root = x;
 	else if (y == y->p->left)
 		y->p->left = x;
 	else

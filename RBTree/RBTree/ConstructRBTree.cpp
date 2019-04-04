@@ -1,17 +1,15 @@
-#include "HEAD.h";
+#include "HEAD.h"
 
 int inputTree(KEYTYPE c[]);
 
 
-void ConstructRBTree(tree T)
+void ConstructRBTree(tree* T)
 {
 	KEYTYPE c[MAXSIZE];
-	KEYTYPE scanner;
 	char d[MAXSIZE];
 	int n;
 
 	n = inputTree(c);
-	cout << c << endl;
 
 	cout << "Please input datas." << endl;
 	for (int i = 0; i < n; i++)
@@ -21,28 +19,16 @@ void ConstructRBTree(tree T)
 
 	for (int i = 0; i < n; i++)
 	{
-		node z;
-		z.key = c[i];
-		z.data = d[i];
-		z.color = 'r';
-		z.left = T.nil;
-		z.right = T.nil;
-		z.size = 1;
-		insertNode(T, &z);
+		//node z;
+		node* z = (node*)malloc(sizeof(node));
+		z->key = c[i];
+		z->data = d[i];
+		z->color = 'r';
+		z->left = T->nil;
+		z->right = T->nil;
+		z->size = 1;
+		insertNode(T, z);
 	}
-	
-	/*do
-	{
-		cin >> scanner;
-
-	} while ();*/
-
-	//while (1)
-	//{
-	//	cin >> scanner;
-	//	cout << scanner;
-	//}
-
 }
 
 int inputTree(KEYTYPE c[])
@@ -57,7 +43,6 @@ int inputTree(KEYTYPE c[])
 	ss.clear();
 	ss.str(s);
 	
-
 	while (1)
 	{
 		KEYTYPE a;
@@ -70,6 +55,5 @@ int inputTree(KEYTYPE c[])
 		n++;
 		i++;
 	}
-	//	c[i] = '\0';
 	return n;
 }

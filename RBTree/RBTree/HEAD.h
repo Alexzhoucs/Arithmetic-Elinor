@@ -25,12 +25,12 @@ struct tree
 };
 
 
-void ConstructRBTree(tree T);
+void ConstructRBTree(tree* T);
 node* findNode(tree T, KEYTYPE key);
 void printout(node* x);
 void findRank(tree T);
-void insertNode(tree T, node* z);
-void insert(tree T);
+void insertNode(tree* T, node* z);
+void insert(tree* T);
 void treeWalk(node* x, node* nil);
 void demo(node* x, node* nil, int i);
 void minKey(tree T);
@@ -39,6 +39,8 @@ void maxKey(tree T);
 node* findMax(tree T);
 void successor(tree T);
 void Select(tree T);
+void Predecessor(tree T);
+
 
 
 

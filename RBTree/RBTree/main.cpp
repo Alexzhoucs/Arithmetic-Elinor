@@ -10,7 +10,7 @@ void main()
 	T.nil = &nil;
 	T.root = &nil;
 	
-	ConstructRBTree(T);
+	ConstructRBTree(&T);
 	
 	while (choice)
 	{
@@ -23,11 +23,13 @@ void main()
 		cout << "7--找前驱" << endl;
 		cout << "8--找秩为x的节点" << endl;
 		cout << "9--求节点的秩" << endl;
+		cout << "------------------------------------------------------------------------------------------";
+		cout << endl;
 		cin >> choice;
 		switch (choice)
 		{
 		case '1':
-			insert(T);
+			insert(&T);
 			break;
 		case '2' :
 			treeWalk(T.root, T.nil);
