@@ -10,14 +10,19 @@ void main()
 	nil.size = 0;
 	T.nil = &nil;
 	T.root = &nil;
-	
-	for (int i = 0; i < 10; i++) {
-		duration = ConstructRBTree(&T);
 
+	ofstream f;
+	f.open("duration.csv", ios::binary);
+	
+	for (int i = 0; i < 10; i++) 
+	{
+
+		duration = ConstructRBTree(&T);
+		f << duration << endl;
 	}
 	
 
-
+	f.close();
 
 	/*
 	while (choice)
