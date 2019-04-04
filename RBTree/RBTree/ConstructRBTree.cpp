@@ -8,16 +8,17 @@ void ConstructRBTree(tree* T)
 	KEYTYPE c[MAXSIZE];
 	char d[MAXSIZE];
 	int n;
-
-	n = inputTree(c);
-
-	cout << "Please input datas." << endl;
-	for (int i = 0; i < n; i++)
+	time_t begint, endt,duration;
+	
+	srand(time);
+	for (int i = 0; i < MAXSIZE; i++)
 	{
-		cin >> d[i];
+		c[i] = rand();
+		d[i] = 'd';
 	}
+	begint = clock();
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < MAXSIZE; i++)
 	{
 		//node z;
 		node* z = (node*)malloc(sizeof(node));
@@ -29,6 +30,10 @@ void ConstructRBTree(tree* T)
 		z->size = 1;
 		insertNode(T, z);
 	}
+	endt = clock();
+	duration = endt - begint;
+	cout << duration;
+	getchar();
 }
 
 int inputTree(KEYTYPE c[])

@@ -5,13 +5,21 @@ void main()
 	tree T;
 	node nil;
 	char choice = '1';
+	time_t duration;
 	nil.color = 'b';
 	nil.size = 0;
 	T.nil = &nil;
 	T.root = &nil;
 	
-	ConstructRBTree(&T);
+	for (int i = 0; i < 10; i++) {
+		duration = ConstructRBTree(&T);
+
+	}
 	
+
+
+
+	/*
 	while (choice)
 	{
 		cout << "1--插入新节点" << endl;
@@ -67,5 +75,5 @@ void main()
 		
 	}
 
-
+	*/
 }
