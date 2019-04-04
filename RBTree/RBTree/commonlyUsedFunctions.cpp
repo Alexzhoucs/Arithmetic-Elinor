@@ -39,12 +39,14 @@ void demo(node* x, node* nil, int i)
 	{
 		for (int j = 0; j < i; j++)
 			cout << "\t\t";
-		cout << "nil | " << x->color << " | " << x->size << endl;
+		cout << "nil|" << x->color << "|" << x->size << endl;
 		return;
 	}
 	else
 	{
 		demo(x->right, nil, i + 1);
+		for (int j = 0; j < i; j++)
+			cout << "\t\t";
 		printout(x);
 		demo(x->left, nil, i + 1);
 	}

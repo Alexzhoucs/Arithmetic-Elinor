@@ -44,5 +44,8 @@
     <ClCompile Include="select.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="predecessor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

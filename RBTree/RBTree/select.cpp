@@ -15,8 +15,9 @@ node* OSSelect(node* x, int i)
 void Select(tree T)
 {
 	int k;
-	cout << "please input the rank of the node you want to find";
+	cout << "please input the rank of the node you want to find" << endl;
 	cin >> k;
 	node* x = OSSelect(T.root, k);
+	cout << "秩为" << k << "的结点是";
 	printout(x);
 }

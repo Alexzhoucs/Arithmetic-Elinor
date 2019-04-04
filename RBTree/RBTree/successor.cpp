@@ -5,12 +5,12 @@ node* findSuccessor(node* x, node* nil);
 void successor(tree T)
 {
 	KEYTYPE key;
-	cout << "Please input the key of x for its children" << endl;
+	cout << "Please input the key of x for its successor" << endl;
 	cin >> key;
 	node* x = findNode(T, key);
 	if (x == T.nil)
 	{
-		cout << "Cannot find this key in the nodes." << endl;
+		cout << "Cannot find this key." << endl;
 		return;
 	}
 	printout(x);
