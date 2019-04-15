@@ -17,7 +17,21 @@ range* divideAndConquer(int A[], int low, int high)
 	range* left = divideAndConquer(A, low, mid);
 	range* right = divideAndConquer(A, mid + 1, high);
 
-	range* cross = 
+	range* cross = maxCrossing(A, low, mid, high);
+	if (left->sum > right->sum)
+	{
+		if (left->sum > cross->sum)
+			return left;
+		else
+			return cross;
+	}
+	else
+	{
+		if (right->sum > cross->sum)
+			return right;
+		else
+			return cross;
+	}
 }
 
 range* maxCrossing(int A[], int low, int mid, int high)
