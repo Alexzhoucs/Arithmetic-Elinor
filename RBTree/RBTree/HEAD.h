@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <time.h>
+#include <fstream>
 
 #define KEYTYPE		int
-#define MAXSIZE		30
+#define MAXSIZE		10000
 
 using namespace std;
 
