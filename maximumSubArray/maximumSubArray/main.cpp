@@ -4,7 +4,7 @@ int main()
 {
 	int A[MAXSIZE];
 	int B[TESTNUM];
-	/*
+	
 	int size;
 	int i;
 	ifstream inF;
@@ -19,12 +19,21 @@ int main()
 		inF >> A[i];
 	}
 	size = i;
+	inF.close();
 
 	range* fz = divideAndConquer(A, 0, size - 1);
 	range* tx = greedy(A, size);
 
-	inF.close();
-	*/
+	ofstream outR;
+	outR.open(OUTPUTR, ios::binary);
+	cout << "分治得到的最大子数组为从 " << fz->low + 1 << " 到 " << fz->high + 1 << " ，和为 " << fz->sum << endl;
+	cout << "贪心得到的最大子数组为从 " << tx->low + 1 << " 到 " << tx->high + 1 << " ，和为 " << tx->sum << endl;
+
+	outR << "分治得到的最大子数组为从 " << fz->low + 1 << " 到 " << fz->high + 1 << " ，和为 " << fz->sum << "。 \r\n";
+	outR << "贪心得到的最大子数组为从 " << tx->low + 1 << " 到 " << tx->high + 1 << " ，和为 " << tx->sum << "。 \r\n";
+	outR.close();
+
+	
 
 	/*
 	time_t starttime1, endtime1, duration1,maxdu1,totaldu1;
