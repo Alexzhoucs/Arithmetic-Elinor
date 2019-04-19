@@ -3,7 +3,11 @@
 #include <sstream>
 
 #define KEYTYPE		int
+<<<<<<< Updated upstream
 #define MAXSIZE		30
+=======
+#define MAXSIZE		2000
+>>>>>>> Stashed changes
 
 using namespace std;
 
@@ -25,7 +29,7 @@ struct tree
 };
 
 
-void ConstructRBTree(tree* T);
+time_t ConstructRBTree(tree* T);
 node* findNode(tree T, KEYTYPE key);
 void printout(node* x);
 void findRank(tree T);

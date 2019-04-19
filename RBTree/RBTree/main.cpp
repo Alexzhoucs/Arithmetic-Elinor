@@ -5,13 +5,36 @@ void main()
 	tree T;
 	node nil;
 	char choice = '1';
+<<<<<<< Updated upstream
+=======
+	time_t duration=0;
+	time_t longestdu = 0;
+	time_t totaldu = 0;
+>>>>>>> Stashed changes
 	nil.color = 'b';
 	nil.size = 0;
 	T.nil = &nil;
 	T.root = &nil;
 	
+<<<<<<< Updated upstream
 	ConstructRBTree(&T);
 	
+=======
+	for (int i = 0; i < 1000; i++) 
+	{
+		T.nil = &nil;
+		T.root = &nil;
+		duration = ConstructRBTree(&T);
+		if (duration > longestdu)
+			longestdu = duration;
+		totaldu += duration;
+	}
+	f << totaldu << endl;
+	f << longestdu << endl;
+	f.close();
+
+	/*
+>>>>>>> Stashed changes
 	while (choice)
 	{
 		cout << "1--插入新节点" << endl;

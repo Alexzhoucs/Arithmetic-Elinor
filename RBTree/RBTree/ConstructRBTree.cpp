@@ -3,16 +3,23 @@
 int inputTree(KEYTYPE c[]);
 
 
-void ConstructRBTree(tree* T)
+time_t ConstructRBTree(tree* T)
 {
 	KEYTYPE c[MAXSIZE];
 	char d[MAXSIZE];
 	int n;
+<<<<<<< Updated upstream
 
 	n = inputTree(c);
 
 	cout << "Please input datas." << endl;
 	for (int i = 0; i < n; i++)
+=======
+	time_t begint, endt,duration;
+	
+	srand((unsigned)time (NULL));
+	for (int i = 0; i < MAXSIZE; i++)
+>>>>>>> Stashed changes
 	{
 		cin >> d[i];
 	}
@@ -29,6 +36,12 @@ void ConstructRBTree(tree* T)
 		z->size = 1;
 		insertNode(T, z);
 	}
+<<<<<<< Updated upstream
+=======
+	endt = clock();
+	duration = endt - begint;
+	return(duration);
+>>>>>>> Stashed changes
 }
 
 int inputTree(KEYTYPE c[])
